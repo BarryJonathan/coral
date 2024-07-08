@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display User Input</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+  <label for="name">Enter your name:</label><br>
+  <input type="text" id="name" oninput="displayInput(this.value)" placeholder="Type here...">
+  <p id="display"></p>
+
+  <script>
+    function displayInput(value) {
+      document.getElementById('display').textContent = "You typed: " + value;
+    }
+  </script>
+</body>
+</html>
